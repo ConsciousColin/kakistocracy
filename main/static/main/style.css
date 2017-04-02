@@ -1,0 +1,262 @@
+
+@import url('fonts//fontsheet.css') all;
+
+body {
+    padding-bottom: 30px;
+    /*background-color: rgba(231, 231, 196, 0.05);*/
+    font-family: "courier_prime", serif;
+}
+
+table{
+    padding-left:20px;
+    padding-top:30px;
+    width:100%;
+}
+
+tr {
+    padding-top: 30px;
+    padding-bottom: 45px;
+    
+}
+
+.theader {
+    border-bottom-style: none !important;
+}
+
+tr:nth-child(4n+1) { 
+    border-bottom-color: rgba(0, 153, 204, 0.15);
+    border-style: solid;
+    border-bottom-width: 3px;
+    background-color: white;
+    }
+tr:nth-child(4n+2) {    
+    border-bottom-color: rgba(255, 51, 0, 0.15);
+    border-style: solid;
+    border-bottom-width: 3px;
+    background-color: rgba(227, 229, 231, 0.05);
+    }
+
+tr:nth-child(4n+3) {  
+    border-bottom-color: rgba(153, 0, 51, 0.15);
+    border-style: solid;
+    border-bottom-width: 3px;
+    background-color: white;
+}
+tr:nth-child(4n+4) { 
+    border-bottom-color: rgba(0, 204, 102, 0.20);
+    border-style: solid;
+    border-bottom-width: 3px;
+    background-color: rgba(227, 229, 231, 0.05);
+}
+
+
+
+th {
+    font-weight: bolder;
+    font-size: 24px;
+    font-family: "courier_prime", sans-serif;
+    padding-left: 25px;
+    border-width: 0px;
+    border-right-width:1px;
+    border-right-style: solid;
+    border-right-color: lightgray;
+    
+    background-color: whitesmoke;
+}
+
+thead{
+    padding-top: 50px;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: lightgray;
+    background-color: white;
+}
+
+td {
+    font-weight: normal;
+    font-size: 18px;
+    font-family: "Archivo-Regular", serif;
+    padding-left: 28px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 250px;
+}
+
+li a {
+    color:cornflowerblue;
+    font-weight: bolder;
+    position: relative;
+    left: 20px;
+    padding-left: 15%;
+    padding-bottom: 0pt;
+    margin-bottom: 0pt;
+}
+
+ul {
+    padding-left: 1cm;
+    margin-bottom: 0cm;
+    border-width: 0cm;   
+}
+
+ul.nav.nav-tabs {
+    padding-left: 0cm;
+    margin-bottom: 0cm;
+    padding-bottom: 0cm;
+    background-color: white;
+}
+
+.page-header{
+    margin-bottom: 0cm;
+    margin-top: 0pt;
+    padding-top: 0pt;
+}
+
+h1 {
+    font-family: "courier_prime", sans-serif;
+    font-size: 25px;
+    left: 0%;
+    position: relative;
+    padding-left: 0.5cm;
+}
+
+h2{
+    font-family: "courier_prime", sans-serif;
+    font-size: 25px;
+    left: 0%;
+    position: relative;    
+    padding-left: 0.7cm;
+    padding-top: 1pt;    
+}
+
+h3{
+   font-family: "courier_prime", sans-serif;
+    padding-left: 15px;
+    left: 0%;
+    position: relative;    
+    font-size: 15px
+    padding-left
+    padding-top: 1pt;    
+}
+
+
+p {
+    position: relative;
+    font-size: 15px;
+    margin-left: 25px;
+    padding-left: 0.5cm;
+    padding-right: 0.5cm;
+}
+
+
+
+.footer {
+    margin-top: 25px;
+    margin-left: 0.5cm;
+    font-size: 12px;
+    position: relative;
+}
+
+.post{    
+    padding: 25px;
+    padding-top: 35px;
+    margin-left: 75px;
+    margin-right: 75px;
+    background-color: rgba(255, 255, 255, 0.15);
+    position: relative;
+    font-family: "courier_prime", sans-serif;
+    }
+
+.cs_post{    
+    padding: 25px;
+    padding-top: 35px;
+    margin-left: 75px;
+    margin-right: 75px;
+    background-color: rgba(255, 255, 255, 0.15);
+    font-family: "Comic Sans MS", sans-serif;
+    }
+
+
+.text{    
+    padding: 25px;
+    margin-left: 25px;
+    margin-right: 30%;
+    font-size: 15px;
+    position: relative;
+    }
+
+.summary{
+    padding-left: 25px;
+    padding-bottom: 10px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    font-size: 18px;
+    font-weight:bold;
+    background-color: rgba(255, 255, 255, 0.15);
+    }
+
+.post-summary{
+    padding-right: 50px;
+    padding-bottom: 10px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    font-size: 18px;
+    font-weight:bold;
+    float: right;
+    }
+
+
+
+a {
+    color: black;
+ }
+
+.title{
+    font-family: "Archivo-Regular";
+    padding-bottom: 15px;
+    font-size: 2.75em;
+    font-weight: bold;
+    padding-left: 25px;
+    padding-top:30px;
+    margin-top: 15px;
+    font-weight: bolder;
+    font-color: Black;
+    background-color: white;
+    }
+
+
+.main{
+    background-color: rgba(231, 231, 196, 0.1);
+    margin-top: 0pt;
+    padding-top: 0pt;
+
+    }
+
+.active {
+    background-color: rgba(231, 231, 196, 0.1);
+    }
+
+.nav nav-tabs{
+    padding-bottom: 0pt;
+}
+
+.spacer{
+    height: 15px;
+}
+
+.container{
+    margin: 0 ; 
+    padding-left:5%;
+    padding-right:15%;
+    width: 100%;
+}
+
+button {
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1.5px solid darkslateblue; 
+    border-radius: 2px;
+    position: relative;
+    margin-left: 75px;
+}
+
+
+

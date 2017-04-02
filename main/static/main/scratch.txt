@@ -1,0 +1,26 @@
+            <div class="container">
+                <div class="page-header">
+                    <h2 class = "post-title">
+                        <a href= "/main/{{post.slug}}">
+                            {{post.title}}
+                        </a>
+                    </h2>
+                
+                    <h3 class="post-summary" > {{post.description}} </h3>
+                </div>
+                <p class = "post">
+                    {{post.content|truncatewords:250 }}
+                </p>                
+                <p>
+                    Posted on
+                    <time datetime="{{post.created|date:"c"}}">
+                    {{post.created|date}}
+                    </time>
+                </p>
+            </div>
+
+
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation"><a class="active" href="/main/">Home</a></li>
+        <li role="presentation"><a href="/main/about">About</a></li> 
+    </ul>

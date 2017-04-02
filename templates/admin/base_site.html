@@ -1,0 +1,11 @@
+{% extends "admin/base.html" %}
+
+{% block title %}
+{{ title }} | {{ site_title|default:_('Website Admin') }}
+{% endblock %}
+
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}"> To improve is to change; to be perfect is to change often</a></h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}

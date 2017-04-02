@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}{{post.title}}{% endblock %}
+
+{% block content %}
+    <a class=title href= "/main">{{blog.name}}\{{post.title.lower.split|join:"_"}}.txt  </a>
+    <div class="main">
+    
+<article>
+    
+        <div class = "spacer"></div>
+        <h1 style="text-align:center;"> {{post.title}} </h1>
+ 
+    <div></div>
+    <div class = "post">
+         
+         <p>
+            <time datetime="{{post.created|date:"c"}}">
+                {{post.created|date}}
+            </time>
+        </p>
+    {{post.content|linebreaks }}
+    </div>
+
+   <button> Use Comic Sans </button>
+</article>
+
+<div class = "spacer"> &nbsp; </div>
+{% endblock %}

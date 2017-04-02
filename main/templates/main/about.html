@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %} {{ blog.name }} {% endblock %}
+
+{% block content %}
+    <div class=title> {{blog.name}} </div>
+    <p> {{blog.tag}} </p>
+    <div class="main">
+                <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation"><a href="/main/">Home</a></li>
+                        <li role="presentation"><a class="active" href="/main/about">About</a></li>
+                </ul>
+            
+            <h2 class="description"> {{ blog.tag }} </h2>
+
+            <p class="post"> {{ blog.about | safe }} </p>  
+    </div>
+{% endblock %}
