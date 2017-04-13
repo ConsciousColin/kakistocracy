@@ -1,6 +1,8 @@
 from django.db import models
 from django.core.urlresolvers import reverse
 from multiselectfield import MultiSelectField
+from markdownx.models import MarkdownxField
+from markdownx.utils import markdownify
 #from tinymce.widgets import TinyMCE
 
 #Declare post types
@@ -10,13 +12,13 @@ image = "Image"
 video = "Video"
 
 class Post(models.Model):
-    title = models.CharField(max_length=255)
-    slug = models.SlugField(unique=True, max_length=255)
+    title       = models.CharField(max_length=255)
+    slug        = models.SlugField(unique=True, max_length=255)
     description = models.CharField(max_length=255)
-    content = models.TextField()
-    published = models.BooleanField(default=True)
-    created = models.DateTimeField(auto_now_add=True)
-    tags_1 = MultiSelectField(choices = 
+    content     = MarkdownxField()
+    published   = models.BooleanField(default=True)
+    created     = models.DateTimeField(auto_now_add=True)
+    tags_1      = MultiSelectField(choices = 
                         ((letter, 'Letter'),
                         (article, "Article"),
                         (image, "Image"),
@@ -24,13 +26,18 @@ class Post(models.Model):
                         , null = True
                         , blank = True
                     )
+    # Create a property that returns the markdown
+    @property
+    def formatted_markdown(self):
+        return markdownify(self.content)
+
 
 class Blog(models.Model):
-    slug = models.CharField(max_length = 120)
-    name = models.CharField(max_length = 120)
-    tag = models.CharField(max_length = 240)
+    slug    = models.CharField(max_length = 120)
+    name    = models.CharField(max_length = 120)
+    tag     = models.CharField(max_length = 240)
     creator = models.CharField(max_length = 60)
-    about = models.TextField()
+    about   = models.TextField()
 
 class Meta:
     ordering = ['-created']

@@ -2,6 +2,7 @@ from django.contrib import admin
 
 from .models import Post, Blog
 
+from markdownx.widgets import AdminMarkdownxWidget
 
 class PostAdmin(admin.ModelAdmin):
     # fields display on change list
@@ -16,6 +17,10 @@ class PostAdmin(admin.ModelAdmin):
     save_on_top = True
     # prepopulate the slug from the title - big timesaver!
     prepopulated_fields = {"slug": ("title",)}
+
+    formfield_overrides = {
+        Post.content: {'widget': AdminMarkdownxWidget},
+    }
 
 admin.site.register(Post, PostAdmin)
 admin.site.register(Blog)

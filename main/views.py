@@ -64,6 +64,11 @@ class NetworkView(TemplateView):
     context_object_name = 'network_view'
     template_name = 'main/network_graph.html'
 
+    def get_context_data(self, **kwargs):
+        context = super(NetworkView,self).get_context_data(**kwargs)
+        context['blog'] = get_object_or_404(Blog, slug='colins_blog' )
+        return context  
+
 class RidesharingMap(TemplateView):
     context_object_name = 'rideshare_view'
     template_name = 'main/seattle_viz.html'

@@ -19,7 +19,7 @@
                 {{post.created|date}}
             </time>
         </p>
-    {{post.content|linebreaks }}
+    {{post.formatted_markdown|safe }}
     </div>
 
    <button> Use Comic Sans </button>
