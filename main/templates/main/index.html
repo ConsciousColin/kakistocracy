@@ -13,31 +13,31 @@
             <th> Description</th>
             <th> Date </th>
             <th> Type(s) </th>
-        </tr></thead>
+        </tr>
+    </thead>
         {% for post in posts %}
         <tr>
-        <td>
-            <a href= "/main/{{post.slug}}">
-                {{post.title}}
-            </a>
-        </td>
-        <td> 
-            {{post.description}} 
-        </td>             
-        <td>         
-            <time datetime="{{post.created|date:"c"}}">
-            {{post.created|date}}
-            </time>
-        </td>
-        <td>
-            {% for tag in post.tags_1 %}
-            {{tag}}, 
-            {% endfor %}
+            <td>
+                <a href= "main/{{post.slug}}">
+                    {{post.title}}
+                </a>
+            </td>
+            <td> 
+                {{post.description}} 
+            </td>             
+            <td>         
+                <time datetime="{{post.created|date:"c"}}">
+                {{post.created|date}}
+                </time>
+            </td>
+            <td>
+                {% for tag in post.tags_1 %}
+                {{tag}}, 
+                {% endfor %}
+            </td>
         </tr>
         {% endfor %}
         </table>
-        
-      
       </div>
    
 {% endblock %}

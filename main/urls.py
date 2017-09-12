@@ -11,3 +11,4 @@ urlpatterns = [
     url(r'^graphs/network', NetworkView.as_view(), name ='network_view'),
     url(r'^graphs/ridesharing', RidesharingMap.as_view(), name ='rideshare_view'),
 ]
+
